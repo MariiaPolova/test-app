@@ -1,41 +1,28 @@
 import React, { Component } from 'react';
-import VinnytsiaDashboard from '../Dashboard/VinnytsiaDashboard';
-import LvivDashboard from '../Dashboard/LvivDashboard';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Menu, Compass } from 'react-feather';
+import { Link } from "react-router-dom";
 import './SideBar.css';
-
-const routes = [
-    {
-        path: "/",
-        exact: true,
-        sidebar: () => <div>home!</div>,
-        main: () => <h2>Home</h2>
-    },
-    {
-        path: "/vinnytsia",
-        component: VinnytsiaDashboard
-    },
-    {
-        path: "/lviv",
-        component: LvivDashboard
-    }
-];
+import  '../../feather-icons/feather.css';
 
 const SideBar = () => (
-    <Router>
+    <aside>
         <div className="SideBar">
             <div className="SideBar-b-dashboard__menu">
+                <div className="SideBar-b-logo"></div>
                 <ul className="SideBar-b-main-menu">
                     <li>
-                        <Link to="/vinnytsia">Vinnytsia</Link>
+                        <Link to="/vinnytsia"> <Compass color="white"/> Vinnytsia</Link>
                     </li>
                     <li>
-                        <Link to="/lviv">Lviv</Link>
+                        <Link to="/lviv"> <Compass color="white"/> Lviv</Link>
                     </li>
                 </ul>
             </div>
         </div>
-    </Router>
+
+    </aside>
+
+
 
 );
 

@@ -4,6 +4,17 @@
     display: flex;
     flex-flow: row wrap;
 }
+
+
+.SideBar-b-logo {
+    background-image: url("logo.png");
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 100px;
+    margin: 20px 0;
+}
+
 .SideBar-b-dashboard__menu {
     width: 300px;
     height: 100%;
@@ -19,21 +30,23 @@
 .SideBar-b-main-menu {
     padding: 10px 25px;
     margin: 0;
+    list-style: none;
 }
 .SideBar-b-main-menu li a{
-    color: #958679;
-    line-height: 32px;
+    color: #fff;
+    line-height: 42px;
     transition: color .5s;
+    font-size: x-large;
 }
 .SideBar-b-main-menu li a:hover,
 .SideBar-b-main-menu li a:focus {
     text-decoration: none;
-    color: #fff8e1;
+    color: #EE3361;
 }
 .SideBar-b-main-menu li a span {
     padding-right: 5px;
     vertical-align: text-top;
 }
 .SideBar-b-main-menu li.active a{
-    color: #fff8e1;
+    color: #fff;
 }

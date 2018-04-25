@@ -1,0 +1,97 @@
+.Dashboard-b-dashboard__grid {
+    height: 100%;
+    flex: 2 0;
+    padding: 10px 0;
+}
+.Dashboard-b-grid__item {
+    float: left;
+    width: 200px;
+    min-height: 150px;
+    /*margin: 10px 10px 0 0;*/
+    margin-bottom: 10px;
+    background: #fff8e1;
+    border-radius: 5px;
+    padding: 10px 15px;
+    overflow: hidden;
+}
+
+/* columns sizes */
+.Dashboard-b-grid__sizer {
+    width: 300px;
+}
+@media all and (max-width: 500px) {
+    .Dashboard-b-grid__sizer {
+        width: 100%;
+    }
+}
+
+/* 2 columns */
+.Dashboard-grid-item-width-1 { width: 150px; }
+.Dashboard-grid-item-width { width: 300px; }
+.Dashboard-grid-item-width2 { width: 450px; }
+.Dashboard-grid-item-width3 { width: 600px; }
+
+.Dashboard-grid-item-height-1 { height: 150px; }
+.Dashboard-grid-item-height { height: 300px; }
+.Dashboard-grid-item-height2 { height: 450px; }
+.Dashboard-grid-item-height3 { height: 600px; }
+
+
+@media all and (max-width: 500px) {
+    .Dashboard-b-grid__item,
+    .Dashboard-b-grid__item {
+        padding-left: 10px;
+    }
+}
+
+.Dashboard-b-grid__content {
+    min-height: 150px;
+    margin: 10px 10px 0 0;
+    background: #fff8e1;
+    border-radius: 5px;
+    padding: 10px 15px;
+    overflow: hidden;
+}
+.Dashboard-b-grid__item a {
+    color: #37262e;
+}
+.Dashboard-b-grid__item a:hover,
+.Dashboard-b-grid__item a:focus {
+    text-decoration: none;
+    color: #EE3361;
+}
+.Dashboard-b-grid__content-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 40px 25px 20px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fff8e1+0,fff8e1+100&0+0,0.8+100 */
+    background: -moz-linear-gradient(top, rgba(255,248,225,0) 0%, rgba(255,248,225,0.8) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255,248,225,0) 0%,rgba(255,248,225,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255,248,225,0) 0%,rgba(255,248,225,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fff8e1', endColorstr='#ccfff8e1',GradientType=0 ); /* IE6-9 */
+}
+
+/* Main menu */
+.Dashboard-b-main-menu {
+    padding: 10px 25px;
+    margin: 0;
+}
+.Dashboard-b-main-menu li a{
+    color: #958679;
+    line-height: 32px;
+    transition: color .5s;
+}
+.Dashboard-b-main-menu li a:hover,
+.Dashboard-b-main-menu li a:focus {
+    text-decoration: none;
+    color: #fff8e1;
+}
+.Dashboard-b-main-menu li a span {
+    padding-right: 5px;
+    vertical-align: text-top;
+}
+.Dashboard-b-main-menu li.active a{
+    color: #fff8e1;
+}

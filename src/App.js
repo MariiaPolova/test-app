@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import SideBar from './Components/SideBar/SideBar.js'
+import SideBar from './Components/SideBar/SideBar.js';
+import Dashboard from './Components/Dashboard/Dashboard.js'
 
 class App extends Component {
 
@@ -10,6 +10,7 @@ class App extends Component {
     return (
       <div className="App">
           <SideBar/>
+          <Dashboard/>
       </div>
     );
   }
