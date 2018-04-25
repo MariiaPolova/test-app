@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Menu, Compass } from 'react-feather';
 import { Link } from "react-router-dom";
 import './SideBar.css';
-import  '../../feather-icons/feather.css';
 
 const SideBar = () => (
     <aside>
