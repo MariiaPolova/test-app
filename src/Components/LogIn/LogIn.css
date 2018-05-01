@@ -1,0 +1,143 @@
+@charset "UTF-8";
+@import 'https://fonts.googleapis.com/css?family=Noto+Sans';
+
+.LogIn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(40, 75, 99, 0.8);
+    background-size: cover;
+    border-radius: 5px;
+    width: 30%;
+}
+.LogIn a {
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 0 10px 0;
+}
+.LogIn a:hover {
+    text-decoration: underline;
+}
+.LogIn-b-logo{
+    background-image: url("../../logo.png");
+    left: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    width: 50%;
+}
+
+.LogIn-logo {
+
+}
+.LogIn-logo i {
+    display: block;
+    padding: 20px 0 0 0;
+    font-size: 70px;
+    transform: translateX(-5px);
+}
+.LogIn-logo span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 70px;
+}
+
+.LogIn label {
+    font-family: 'Roboto';
+    color: white;
+    font-size: 14px;
+    margin-top: 27px;
+    transition: opacity 0.3s ease-in-out;
+    display: inline;
+}
+.LogIn label::before {
+    padding: 5px 35px 0 0;
+    opacity: 0.5;
+}
+
+.LogIn form button {
+    position: relative;
+    margin: 25px 0 5px 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #58a4b0;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    width: 85%;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.social-signin {
+    padding-bottom: 5%;
+}
+.social-signin button {
+    width: 85%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    margin: 15px 0 5px 0;
+    left: 50%;
+}
+.social-signin button i {
+    font-size: 20px;
+    color: white;
+    padding-left: 10px;
+}
+.social-signin button.google {
+    background: #DB4437;
+}
+
+.logo {
+    text-align: center;
+    color: white;
+}
+.logo i {
+    display: block;
+    padding: 20px 0 0 0;
+    font-size: 70px;
+    transform: translateX(-5px);
+}
+.logo span {
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+}
+
+.animation-enter {
+    opacity: 0.01;
+}
+.animation-enter.animation-enter-active {
+    opacity: 1;
+    transition: opacity 0.6s ease, margin 0.5s ease;
+}
+
+.animation-leave {
+    margin-top: 0px;
+    opacity: 1;
+}
+.animation-leave.animation-leave-active {
+    margin-top: -30px;
+    opacity: 0.01;
+    transition: opacity 0.2s ease;
+}
+
+.animation-appear {
+    opacity: 0.01;
+}
+
+.animation-appear.animation-appear-active {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
