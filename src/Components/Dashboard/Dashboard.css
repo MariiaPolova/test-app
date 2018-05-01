@@ -7,7 +7,6 @@
     float: left;
     width: 200px;
     min-height: 150px;
-    /*margin: 10px 10px 0 0;*/
     margin-bottom: 10px;
     background: #fff8e1;
     border-radius: 5px;
@@ -15,7 +14,7 @@
     overflow: hidden;
 }
 
-/* columns sizes */
+/* max size for mansonry */
 .Dashboard-b-grid__sizer {
     width: 300px;
 }
@@ -25,7 +24,7 @@
     }
 }
 
-/* 2 columns */
+/* styles for unified sizes - not used currently */
 .Dashboard-grid-item-width-1 { width: 150px; }
 .Dashboard-grid-item-width { width: 300px; }
 .Dashboard-grid-item-width2 { width: 450px; }
@@ -43,7 +42,7 @@
         padding-left: 10px;
     }
 }
-
+  /*not used*/
 .Dashboard-b-grid__content {
     min-height: 150px;
     margin: 10px 10px 0 0;
@@ -52,14 +51,7 @@
     padding: 10px 15px;
     overflow: hidden;
 }
-.Dashboard-b-grid__item a {
-    color: #37262e;
-}
-.Dashboard-b-grid__item a:hover,
-.Dashboard-b-grid__item a:focus {
-    text-decoration: none;
-    color: #EE3361;
-}
+
 .Dashboard-b-grid__content-title {
     position: absolute;
     left: 0;
@@ -71,6 +63,15 @@
     background: -webkit-linear-gradient(top, rgba(255,248,225,0) 0%,rgba(255,248,225,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, rgba(255,248,225,0) 0%,rgba(255,248,225,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fff8e1', endColorstr='#ccfff8e1',GradientType=0 ); /* IE6-9 */
+}
+
+.Dashboard-b-grid__item a {
+    color: #37262e;
+}
+.Dashboard-b-grid__item a:hover,
+.Dashboard-b-grid__item a:focus {
+    text-decoration: none;
+    color: #EE3361;
 }
 
 /* Main menu */

@@ -13,6 +13,17 @@ const masonryOptions = {
 class Gallery extends React.Component {
     constructor(props){
     super(props);
+
+    this.state = {
+        masonryState : null
+        }
+    }
+
+    componentDidMount() {
+            this.setState = ({masonryState : this.masonry});
+            console.log('this.state.masonryState');
+            console.log(this.state.masonryState);
+            console.log(this.masonry);
     }
 
     render() {
@@ -22,18 +33,14 @@ class Gallery extends React.Component {
                   height={element.height}
                   id={element.id}
                   img={element.img}
+                  masonryState ={this.state.masonryState}
                   />);
-
-
-            console.log(listItems);
-
 
         return (
             <Masonry
                 className={'Dashboard-b-dashboard__grid masonry'}
-                options={masonryOptions}
-                disableImagesLoaded={false} // default false
-                updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
+                options={masonryOptions} // inited at the top
+                ref={c => {this.masonry =  c}}
             >
                 <div className="Dashboard-b-grid__sizer"></div>
                 {listItems}

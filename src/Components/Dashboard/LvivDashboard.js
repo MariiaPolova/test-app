@@ -1,6 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Gallery from './Mansonry';
 import './Dashboard.css';
+import SideBar from '../SideBar/SideBar';
+import './Dashboard.css';
+
 
 
 class LvivDashboard extends Component {
@@ -8,13 +11,13 @@ class LvivDashboard extends Component {
         super(props);
         this.state = {
             elements: [
-                { width :'Dashboard-grid-item-width', height:'Dashboard-grid-item-height3', id:12,
+                { width :300, height:600, id:12,
                     img:"http://dreamstop.com/wp-content/uploads/2013/07/office-dream-meaning.jpeg"},
-                { width :'Dashboard-grid-item-width', height:'Dashboard-grid-item-height', id:13},
-                { width :'Dashboard-grid-item-width3', height:'Dashboard-grid-item-height', id:14},
-                { width :'Dashboard-grid-item-width', height:'Dashboard-grid-item-height3', id:15},
-                { width :'Dashboard-grid-item-width', height:'Dashboard-grid-item-height', id:17},
-                { width :'Dashboard-grid-item-width', height:'Dashboard-grid-item-height', id:18},
+                { width :300, height:300, id:13},
+                { width :600, height:300, id:14},
+                { width :300, height:600, id:15},
+                { width :300, height:300, id:17},
+                { width :300, height:300, id:18},
             ]
         };
     }
@@ -22,7 +25,13 @@ class LvivDashboard extends Component {
 
     render() {
         return(
-            <Gallery elements={this.state.elements}/>
+            <Fragment>
+                <SideBar/>
+                <main className="Dashboard-b-dashboard__grid">
+                    <Gallery elements={this.state.elements}/>
+                </main>
+            </Fragment>
+
         );
     }
 }

@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
+import React, {Component, Fragment} from 'react';
 import Gallery from './Mansonry';
+import './Dashboard.css';
+import SideBar from '../SideBar/SideBar';
 import './Dashboard.css';
 
 class VinnytsiaDashboard extends Component {
@@ -7,13 +9,12 @@ class VinnytsiaDashboard extends Component {
         super(props);
         this.state = {
             elements: [
-                { width :'Dashboard-grid-item-width', height:'Dashboard-grid-item-height', id:2,
-                    img:"http://dreamstop.com/wp-content/uploads/2013/07/office-dream-meaning.jpeg"},
-                { width :'Dashboard-grid-item-width', height:'Dashboard-grid-item-height', id:3},
-                { width :'Dashboard-grid-item-width', height:'Dashboard-grid-item-height', id:4},
-                { width :'Dashboard-grid-item-width3', height:'Dashboard-grid-item-height3', id:5},
-                { width :'Dashboard-grid-item-width2', height:'Dashboard-grid-item-height', id:7},
-                { width :'Dashboard-grid-item-width', height:'Dashboard-grid-item-height', id:8},
+                { width :300, height:300, id:2},
+                { width :300, height:300, id:3},
+                { width :300, height:300, id:4},
+                { width :600, height:600, id:5},
+                { width :450, height:300, id:7},
+                { width :300, height:300, id:8},
             ]
         };
     }
@@ -21,7 +22,12 @@ class VinnytsiaDashboard extends Component {
 
     render() {
         return(
-            <Gallery elements={this.state.elements}/>
+            <Fragment>
+                <SideBar/>
+                <main className="Dashboard-b-dashboard__grid">
+                    <Gallery elements={this.state.elements}/>
+                </main>
+            </Fragment>
         );
     }
 }

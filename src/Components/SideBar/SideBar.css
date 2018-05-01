@@ -7,7 +7,7 @@
 
 
 .SideBar-b-logo {
-    background-image: url("logo.png");
+    background-image: url("../../logo.png");
     width: 100%;
     background-size: contain;
     background-repeat: no-repeat;
