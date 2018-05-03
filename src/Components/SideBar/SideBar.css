@@ -40,6 +40,10 @@
         height: 100%;
         padding: 10px 15px;
     }
+
+    #menu-content.closed{
+        max-height: fit-content;
+    }
 }
 .SideBar-b-dashboard__menu .toggle-btn {
     display: none;
