@@ -1,7 +1,7 @@
 import React, {Component}  from 'react';
 import './Tile.css';
-import { Menu, Edit2 } from 'react-feather';
 import { Resizable } from 'react-resizable';
+import {MasonryConsumer} from '../Mansonry';
 
 class Tile extends Component {
 
@@ -9,8 +9,7 @@ class Tile extends Component {
         super(props);
         this.state = {width: props.width,
             height: props.height,
-            id: 0,
-            masonryState: props.masonryState};
+            id: 0};
         }
 
         onResize =(event, {element, size}) =>{
@@ -21,9 +20,8 @@ class Tile extends Component {
         };
 
         handleMouseUp =(event)=> {
-
            // this.masonry.performLayout();
-           console.log(this.masonryState);
+           console.log(this.masonry);
         };
 
     render() {
@@ -34,30 +32,27 @@ class Tile extends Component {
         console.log(this.state.height, this.state.width);
 
         return (
-            <Resizable className='Dashboard-b-grid__item'
-                       width={this.state.width}
-                       height={this.state.height}
-                       onResize={this.onResize}
-                       onMouseUp={this.handleMouseUp}>
-                <div className='Dashboard-b-grid__item'
-                     style={{width: this.state.width + 'px', height: this.state.height + 'px'}}>
-                    <div className="Tile-b-grid__left-icon">
-                        <a href="">
-                            <Menu />
-                        </a>
-                    </div>
+            <MasonryConsumer>
+                {(masonry) => {
+                    console.log('---masonry', masonry);
+                    return (
+                        <Resizable className='Dashboard-b-grid__item'
+                                   width={this.state.width}
+                                   height={this.state.height}
+                                   onResize={this.onResize}
+                                   onMouseUp={this.handleMouseUp(masonry)}>
+                            <div className='Dashboard-b-grid__item'
+                                 style={{width: this.state.width + 'px', height: this.state.height + 'px'}}>
 
-                    <div className="Tile-b-grid__right-icon">
-                        <a href="">
-                            <Edit2 />
-                        </a>
-                    </div>
+                                <div className="Tile-b-grid__content-title">
+                                    <h3>Camera #{this.props.id}</h3>
+                                </div>
+                            </div>
+                        </Resizable>
+                    );
+                }}
+            </MasonryConsumer>
 
-                    <div className="Tile-b-grid__content-title">
-                        <h3>Camera #{this.props.id}</h3>
-                    </div>
-                </div>
-            </Resizable>
 
         );
     }

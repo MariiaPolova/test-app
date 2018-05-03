@@ -141,3 +141,11 @@
     opacity: 1;
     transition: opacity 0.5s ease-in;
 }
+
+
+@media (max-width: 767px) {
+    .LogIn {
+        width: 70%;
+    }
+}
+

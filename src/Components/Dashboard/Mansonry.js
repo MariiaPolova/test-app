@@ -1,5 +1,5 @@
 import React from 'react';
-import Masonry from 'react-masonry-component';
+import Masonry, {PerformLayout} from 'react-masonry-component';
 import Tile from "./Tile/Tile";
 import "./Dashboard.css"
 
@@ -10,21 +10,17 @@ const masonryOptions = {
     gutter: 10,
 };
 
+const Context = React.createContext();
+
 class Gallery extends React.Component {
     constructor(props){
     super(props);
-
-    this.state = {
-        masonryState : null
-        }
     }
 
-    componentDidMount() {
-            this.setState = ({masonryState : this.masonry});
-            console.log('this.state.masonryState');
-            console.log(this.state.masonryState);
-            console.log(this.masonry);
-    }
+    // shouldComponentUpdate(nextProps, nextState, nextContext) {
+    //     console.log('this.masonry');
+    //     console.log(this.masonry);
+    // }
 
     render() {
         const listItems = this.props.elements.map((element) =>
@@ -33,7 +29,6 @@ class Gallery extends React.Component {
                   height={element.height}
                   id={element.id}
                   img={element.img}
-                  masonryState ={this.state.masonryState}
                   />);
 
         return (
@@ -42,11 +37,13 @@ class Gallery extends React.Component {
                 options={masonryOptions} // inited at the top
                 ref={c => {this.masonry =  c}}
             >
-                <div className="Dashboard-b-grid__sizer"></div>
-                {listItems}
+                <Context.Provider value={'someparam'}>
+                    <div className="Dashboard-b-grid__sizer"></div>
+                    {listItems}
+                </Context.Provider>
             </Masonry>
         );
     }
 }
-
+export const MasonryConsumer = Context.Consumer;
 export default Gallery;
