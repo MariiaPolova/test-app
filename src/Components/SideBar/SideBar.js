@@ -6,8 +6,8 @@ class SideBar extends Component{
     constructor(props){
         super(props);
         this.state = {
-            menuClosed: false,
-            submenuToggled: false
+            menuClosed: true,
+            submenuToggled: true
         }
     }
 

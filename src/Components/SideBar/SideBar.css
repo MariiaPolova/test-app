@@ -40,11 +40,14 @@
 
 #toggled-submenu {
     max-height: 100vh;
-    transition: all .4s ease;
+    opacity: 1;
 }
 
 #toggled-submenu.submenuToggled {
-    display: none;
+    transition: opacity 2s ease-out;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
 }
 
 @media (min-width: 767px) {
