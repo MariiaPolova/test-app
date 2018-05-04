@@ -18,11 +18,11 @@
 .Dashboard-b-grid__sizer {
     width: 300px;
 }
-@media all and (max-width: 500px) {
-    .Dashboard-b-grid__sizer {
-        width: 100%;
-    }
-}
+/*@media all and (max-width: 767px) {*/
+    /*.Dashboard-b-grid__sizer {*/
+        /*width: 100%;*/
+    /*}*/
+/*}*/
 
 /* styles for unified sizes - not used currently */
 .Dashboard-grid-item-width-1 { width: 150px; }
@@ -36,10 +36,14 @@
 .Dashboard-grid-item-height3 { height: 600px; }
 
 
-@media all and (max-width: 500px) {
-    .Dashboard-b-grid__item,
-    .Dashboard-b-grid__item {
-        padding-left: 10px;
+@media (max-width: 767px) {
+    .Dashboard-b-dashboard__grid {
+        padding-top: 140px;
+        padding-left:20px;
+    }
+
+    main.Dashboard-b-dashboard__grid{
+        padding: 0;
     }
 }
   /*not used*/
@@ -65,9 +69,6 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fff8e1', endColorstr='#ccfff8e1',GradientType=0 ); /* IE6-9 */
 }
 
-.Dashboard-b-grid__item a {
-    color: #37262e;
-}
 .Dashboard-b-grid__item a:hover,
 .Dashboard-b-grid__item a:focus {
     text-decoration: none;

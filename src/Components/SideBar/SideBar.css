@@ -25,13 +25,26 @@
     font-size: x-large;
 }
 
-#menu-content {
+.SideBar-b-main-title a{
+    cursor: pointer;
+}
+
+.SideBar-b-main-title a:active,
+.SideBar-b-main-title a:hover,
+.SideBar-b-main-title a:focus
+{
+    text-decoration: none;
+    color: #EE3361;
+    outline: none;
+}
+
+#toggled-submenu {
     max-height: 100vh;
     transition: all .4s ease;
-    overflow: hidden;
 }
-#menu-content.closed {
-    max-height: 0;
+
+#toggled-submenu.submenuToggled {
+    display: none;
 }
 
 @media (min-width: 767px) {
@@ -54,24 +67,29 @@
     margin: 0;
     list-style: none;
 }
-.SideBar-b-main-menu li a{
+.SideBar-b-main-menu a{
     color: #fff;
     line-height: 42px;
     transition: color .5s;
-    font-size: medium;
+    font-size: large;
     padding-left: 10%;
 }
-.SideBar-b-main-menu li a:hover,
-.SideBar-b-main-menu li a:focus {
+.SideBar-b-main-menu a:hover,
+.SideBar-b-main-menu a:focus,
+.SideBar-b-submenu a:focus {
     text-decoration: none;
     color: #EE3361;
 }
-.SideBar-b-main-menu li a span {
-    padding-right: 5px;
-    vertical-align: text-top;
-}
+
 .SideBar-b-main-menu li.active a{
     color: #EE3361;
+}
+
+.SideBar-b-submenu{
+    display: block;
+    max-height: 0;
+    list-style: none;
+    -webkit-transition: all 0.5s ease-out;
 }
 
 .SideBar-b-logged-user{
@@ -117,20 +135,22 @@
 
 @media (max-width: 767px) {
     .SideBar-b-dashboard__menu {
-        position: relative;
+        position: absolute;
+        z-index: 1;
+        background: #0B314F;
+        opacity: 0.95;
         width: 100%;
-        margin-bottom: 10px;
+        left: 0px;
     }
     .SideBar-b-dashboard__menu .toggle-btn {
         display: block;
         cursor: pointer;
         position: absolute;
         right: 25px;
-        top: 25px;
+        top: 45px;
         z-index: 10 !important;
         padding: 3px;
         background-color: #ffffff;
-        color: #000;
         width: 40px;
         text-align: center;
     }
@@ -146,6 +166,16 @@
         margin: 10px;
         list-style: none;
     }
+
+    #responsive-menu-content {
+        max-height: 100vh;
+        transition: all .4s ease;
+        overflow: hidden;
+    }
+    #responsive-menu-content.closed {
+        max-height: 0;
+    }
+
 }
 
 

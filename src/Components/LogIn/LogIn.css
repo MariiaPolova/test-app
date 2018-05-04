@@ -9,7 +9,7 @@
     background: rgba(40, 75, 99, 0.8);
     background-size: cover;
     border-radius: 5px;
-    width: 30%;
+    width: 20%;
 }
 .LogIn a {
     display: block;
@@ -72,7 +72,7 @@
     border-radius: 5px;
     padding: 10px;
     color: white;
-    width: 85%;
+    width: 70%;
     font-family: "Roboto", sans-serif;
     font-size: 20px;
     cursor: pointer;
@@ -81,16 +81,7 @@
 .social-signin {
     padding-bottom: 5%;
 }
-.social-signin button {
-    width: 85%;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 10px;
-    position: relative;
-    margin: 15px 0 5px 0;
-    left: 50%;
-}
+
 .social-signin button i {
     font-size: 20px;
     color: white;
@@ -142,10 +133,22 @@
     transition: opacity 0.5s ease-in;
 }
 
-
-@media (max-width: 767px) {
+/*Tablets*/
+@media (min-width: 767px)
+        and (max-width: 1280px){
     .LogIn {
         width: 70%;
     }
 }
+
+/*Phones*/
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 767px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .LogIn {
+        width: 70%;
+    }
+}
+
 

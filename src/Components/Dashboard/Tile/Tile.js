@@ -20,40 +20,29 @@ class Tile extends Component {
         };
 
         handleMouseUp =(event)=> {
-           // this.masonry.performLayout();
-           console.log(this.masonry);
+            this.props.handleUp();
+        };
+
+        handleTouchEnd =(event)=> {
+            this.props.handleUp();
         };
 
     render() {
-        const content={
-            background: 'url(' + this.props.img + ')'
-        };
-
-        console.log(this.state.height, this.state.width);
-
         return (
-            <MasonryConsumer>
-                {(masonry) => {
-                    console.log('---masonry', masonry);
-                    return (
-                        <Resizable className='Dashboard-b-grid__item'
-                                   width={this.state.width}
-                                   height={this.state.height}
-                                   onResize={this.onResize}
-                                   onMouseUp={this.handleMouseUp(masonry)}>
-                            <div className='Dashboard-b-grid__item'
-                                 style={{width: this.state.width + 'px', height: this.state.height + 'px'}}>
+            <Resizable className='Dashboard-b-grid__item'
+                       width={this.state.width}
+                       height={this.state.height}
+                       onResize={this.onResize}
+                       onMouseUp={this.handleMouseUp}
+                       onTouchEnd={this.handleTouchEnd}>
+                <div className='Dashboard-b-grid__item'
+                     style={{width: this.state.width + 'px', height: this.state.height + 'px'}}>
 
-                                <div className="Tile-b-grid__content-title">
-                                    <h3>Camera #{this.props.id}</h3>
-                                </div>
-                            </div>
-                        </Resizable>
-                    );
-                }}
-            </MasonryConsumer>
-
-
+                    <div className="Tile-b-grid__content-title">
+                        <h3>Camera #{this.props.id}</h3>
+                    </div>
+                </div>
+            </Resizable>
         );
     }
 }

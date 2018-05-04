@@ -15,20 +15,23 @@ const Context = React.createContext();
 class Gallery extends React.Component {
     constructor(props){
     super(props);
+
+    this.masonry = null;
     }
 
-    // shouldComponentUpdate(nextProps, nextState, nextContext) {
-    //     console.log('this.masonry');
-    //     console.log(this.masonry);
-    // }
+    handleUp=()=>{
+        this.masonry.performLayout();
+    };
 
     render() {
+
         const listItems = this.props.elements.map((element) =>
             <Tile key={element.id}
                   width={element.width}
                   height={element.height}
                   id={element.id}
                   img={element.img}
+                  handleUp = {()=>{this.handleUp()}}
                   />);
 
         return (
@@ -37,13 +40,10 @@ class Gallery extends React.Component {
                 options={masonryOptions} // inited at the top
                 ref={c => {this.masonry =  c}}
             >
-                <Context.Provider value={'someparam'}>
                     <div className="Dashboard-b-grid__sizer"></div>
                     {listItems}
-                </Context.Provider>
             </Masonry>
         );
     }
 }
-export const MasonryConsumer = Context.Consumer;
 export default Gallery;
