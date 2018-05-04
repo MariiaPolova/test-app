@@ -1,5 +1,5 @@
 import React from 'react';
-import Masonry, {PerformLayout} from 'react-masonry-component';
+import Masonry from 'react-masonry-component';
 import Tile from "./Tile/Tile";
 import "./Dashboard.css"
 
@@ -9,8 +9,6 @@ const masonryOptions = {
     columnWidth: '.Dashboard-b-grid__sizer',
     gutter: 10,
 };
-
-const Context = React.createContext();
 
 class Gallery extends React.Component {
     constructor(props){
@@ -30,7 +28,7 @@ class Gallery extends React.Component {
                   width={element.width}
                   height={element.height}
                   id={element.id}
-                  img={element.img}
+                  office={this.props.office}
                   handleUp = {()=>{this.handleUp()}}
                   />);
 

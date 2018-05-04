@@ -10,14 +10,16 @@ class LvivDashboard extends Component {
     constructor(props){
         super(props);
         this.state = {
+            office: 'Lviv',
             elements: [
-                { width :300, height:600, id:12,
+                { width :600, height:450, id:12,
                     img:"http://dreamstop.com/wp-content/uploads/2013/07/office-dream-meaning.jpeg"},
-                { width :300, height:300, id:13},
-                { width :450, height:300, id:14},
-                { width :300, height:450, id:15},
+                { width :600, height:300, id:13},
+                { width :300, height:300, id:14},
+                { width :600, height:300, id:15},
                 { width :300, height:300, id:17},
-                { width :300, height:300, id:18},
+                { width :600, height:300, id:18},
+                { width :600, height:300, id:19},
             ]
         };
     }
@@ -28,7 +30,7 @@ class LvivDashboard extends Component {
             <Fragment>
                 <SideBar/>
                 <main className="Dashboard-b-dashboard__grid">
-                    <Gallery elements={this.state.elements}/>
+                    <Gallery office={this.state.office} elements={this.state.elements}/>
                 </main>
             </Fragment>
 

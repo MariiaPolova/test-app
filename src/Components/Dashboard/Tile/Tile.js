@@ -1,7 +1,6 @@
 import React, {Component}  from 'react';
 import './Tile.css';
 import { Resizable } from 'react-resizable';
-import {MasonryConsumer} from '../Mansonry';
 
 class Tile extends Component {
 
@@ -39,6 +38,7 @@ class Tile extends Component {
                      style={{width: this.state.width + 'px', height: this.state.height + 'px'}}>
 
                     <div className="Tile-b-grid__content-title">
+                        <h3>Office {this.props.office}</h3>
                         <h3>Camera #{this.props.id}</h3>
                     </div>
                 </div>

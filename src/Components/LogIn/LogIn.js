@@ -12,7 +12,6 @@ class LogIn extends React.Component{
 
     handleInputSubmit  = (event) =>{
         event.preventDefault();
-        console.log('handleInputSubmit');
         this.setState({isLogged: true});
         this.props.history.push({ pathname: '/vinnytsia',
             state: { isLogged: this.state.isLogged }});
