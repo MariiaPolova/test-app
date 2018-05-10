@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import { BrowserRouter,  Route } from 'react-router-dom'
+
 import './App.css';
 import LogIn from './Components/LogIn/LogIn';
 import VinnytsiaDashboard from './Components/Dashboard/VinnytsiaDashboard';
 import LvivDashboard from './Components/Dashboard/LvivDashboard';
-import { BrowserRouter,  Route } from 'react-router-dom'
+
 
 class App extends Component {
   render() {

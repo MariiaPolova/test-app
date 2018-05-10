@@ -18,10 +18,12 @@ class Tile extends Component {
             });
         };
 
+        // for web page
         handleMouseUp =(event)=> {
             this.props.handleUp();
         };
 
+        // for mobile
         handleTouchEnd =(event)=> {
             this.props.handleUp();
         };

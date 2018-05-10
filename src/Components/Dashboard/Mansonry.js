@@ -17,7 +17,7 @@ class Gallery extends React.Component {
     this.masonry = null;
     }
 
-    handleUp=()=>{
+    handleUp = () => {
         this.masonry.performLayout();
     };
 

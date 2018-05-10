@@ -1,20 +1,17 @@
 import React from 'react';
 import './LogIn.css';
 import {withRouter} from 'react-router-dom';
-
-
+import LoginContainer from "./GoogleLogin/LoginContainer";
 
 class LogIn extends React.Component{
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state = { isLogged: false };
+        this.state = {isLogged: false};
     }
 
-    handleInputSubmit  = (event) =>{
-        event.preventDefault();
-        this.setState({isLogged: true});
-        this.props.history.push({ pathname: '/vinnytsia',
-            state: { isLogged: this.state.isLogged }});
+   handleInputSubmit  = (event) =>{
+        console.log('handle submit');
+        this.props.history.push({pathname: '/vinnytsia'});
     };
 
     render(){
@@ -26,13 +23,7 @@ class LogIn extends React.Component{
                     <span> Smart Office Dashboard</span>
                 </div>
 
-                <form onSubmit={this.handleInputSubmit}>
-                    <div className="social-signin">
-                        <button className="social-signin google">
-                            Log In with
-                            <i className="fab fa-google-plus-g" aria-hidden="true"></i></button>
-                    </div>
-                </form>
+                <LoginContainer handleSubmit={this.handleInputSubmit}/>
             </div>
         )
     }
