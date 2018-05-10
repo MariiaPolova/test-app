@@ -23,7 +23,8 @@ const GoogleButton = ({setLoginData, handleSubmit}) => {
             <GoogleLogin clientId="1014734383712-5h8lp2c5jc9knsjkvqmfgrbiqr4731pq.apps.googleusercontent.com"
                          buttonText="Login"
                          onSuccess={(googleUser) => {onSignIn(googleUser, setLoginData, handleSubmit)}}
-                         onFalure={onSignIn}>
+                         onFalure={onSignIn}
+                         className="GoogleLogin">
                 <i className="fab fa-google" aria-hidden="true"></i>
                 <span className="social-signin google"> Login with Google</span>
 
