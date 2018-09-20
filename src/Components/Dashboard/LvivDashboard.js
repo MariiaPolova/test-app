@@ -16,8 +16,6 @@ class LvivDashboard extends Component {
                     img:"http://dreamstop.com/wp-content/uploads/2013/07/office-dream-meaning.jpeg"},
                 { width :600, height:300, id:13},
                 { width :300, height:300, id:14},
-                { width :600, height:300, id:15},
-                { width :300, height:300, id:17},
                 { width :600, height:300, id:18},
                 { width :600, height:300, id:19},
             ]
