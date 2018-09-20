@@ -41,7 +41,7 @@ class Tile extends Component {
 
                     <div className="Tile-b-grid__content-title">
                         <h3>Office {this.props.office}</h3>
-                        <h3>Camera #{this.props.id}</h3>
+                        <h4 className="Dashboard-b-dashboard__grid-item">Camera #{this.props.id}</h4>
                     </div>
                 </div>
             </Resizable>
