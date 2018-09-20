@@ -98,3 +98,7 @@
 .Dashboard-b-main-menu li.active a{
     color: #fff8e1;
 }
+
+.Dashboard-b-dashboard__grid-item {
+    color: #EE3361;
+}

@@ -10,10 +10,10 @@ class VinnytsiaDashboard extends Component {
         this.state = {
             office: 'Vinnytsia',
             elements: [
-                { width :300, height:600, id:2},
+                { width :300, height:300, id:2},
                 { width :300, height:300, id:3},
                 { width :300, height:450, id:4},
-                { width :300, height:600, id:5},
+                { width :300, height:300, id:5},
                 { width :300, height:450, id:6},
                 { width :300, height:300, id:7},
                 { width :300, height:300, id:8},
